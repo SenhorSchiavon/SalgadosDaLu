@@ -48,12 +48,15 @@ main {
     line-height: 28px;
     /* 87.5% */
 }
-
+nav .botao-abrir span {
+    color: #fff;
+    text-decoration: none;
+    text-shadow: 1px 1px 2px #000;
+    font-size: 24px;
+    padding: 5px;
+}
 @media screen and (max-width:768px) {
-    .aside {
-        left: -100%;
-        transition: .6s;
-    }
+   
 
     section {
         margin-left: 0;
@@ -71,5 +74,7 @@ main {
     .button {
         flex-direction: column;
     }
+
+    
 
 }

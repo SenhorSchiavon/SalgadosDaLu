@@ -48,6 +48,7 @@ main {
     line-height: 28px;
     /* 87.5% */
 }
+
 nav .botao-abrir span {
     color: #fff;
     text-decoration: none;
@@ -55,9 +56,19 @@ nav .botao-abrir span {
     font-size: 24px;
     padding: 5px;
 }
-@media screen and (max-width:768px) {
-   
 
+@media (max-width: 1900px){
+    #modal {
+        height: 700px;
+        overflow-y: auto;
+    }
+
+    #salvar-produto {
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width:768px) {
     section {
         margin-left: 0;
     }
@@ -74,7 +85,59 @@ nav .botao-abrir span {
     .button {
         flex-direction: column;
     }
+}
 
-    
+@media (max-width: 540px){
+    .titulo{
+        text-align: center;
+    }
 
+    #return {
+        margin-bottom: 20px;
+    }
+
+    #nome, #preco {
+        width: 200px;
+    }
+
+    #salvar-produto {
+        width: 430px;
+        margin-bottom: 10px;
+    }
+
+    #area-principal {
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 440px){
+    #nome, #preco {
+        width: 180px;
+    }
+
+    #salvar-produto {
+        width: 360px;
+    }
+}
+
+@media (max-width: 412px){
+    #nome, #preco {
+        width: 160px;
+    }
+
+    #salvar-produto {
+        width: 350px;
+    }
+}
+
+@media (max-width: 393px) {
+    #salvar-produto {
+        width: 340px;
+    }
+}
+
+@media (max-width: 360px) {
+    #salvar-produto {
+        width: 330px;
+    }
 }

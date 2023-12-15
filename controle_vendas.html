@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Vendas</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/style-vendas.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="icon" type="image/x-icon" href="assets/img/logo.svg">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
+</head>
+
+<body>
+    <nav>
+        <div class="menu-lateral" id="menu-mobile">
+            <div class="botao-abrir" onclick="menuShow()" id="botao-abrir">
+                <span><i class="bi bi-list"></i></span>
+            </div>
+
+            <div class="menu-icon">
+                <img src="assets/img/logo.svg" alt="">
+            </div>
+
+            <hr>
+
+            <ul class="menu-items">
+                <a href="controle_vendas.html">
+                    <li><span> <img src="assets/img/vendas-logo.svg" alt="">Vendas</span></li>
+                </a>
+                <a href="controle_clientes.html">
+                    <li><span><img src="assets/img/clientes-logo.svg" alt="">Clientes</span></li>
+                </a>
+                <a href="catalogo_produtos.html">
+                    <li><span><img src="assets/img/produtos-logo.svg" alt="">Produtos</span></li>
+                </a>
+            </ul>
+
+            <div class="botao-sair">
+                <img src="assets/img/exit-logo.svg" alt="">
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div id="container-tabela">
+            <header class="controle-vendas">
+                <ul class="buscar-vendas">
+                    <li class="info-loja">
+                        <h2>Controle de Vendas <br></h2>
+                        <span>Lu Salgados</span>
+                    </li>
+                    <li class="input-icon">
+                        <input type="search" placeholder="Buscar Venda" name="buscar-vendas">
+                        <button class="lupa"><i class="bi bi-search"></i></button>
+                    </li>
+                    <div id="button-header-wrapper">
+                        <li class="filter-icon">
+                            <button class="filtros">
+                                <span><i class="bi bi-filter"></i></span>
+                                Filtros
+                            </button>
+                        </li>
+                        <li class="adc-icon">
+                            <button class="adc" onclick="modalShow()">
+                                <span>+</span>Adicionar
+                            </button>
+                        </li>
+                    </div>
+                </ul>
+            </header><!-- fim da div - controle-vendas -->
+
+            <div class="wrapper-tabela">
+                <table id="tabela-produtos">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Produto Vendido</th>
+                            <th>Valor</th>
+                            <th>Data</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span>33</span></td>
+                            <td><span>100 Salgados</span></td>
+                            <td>R$ 60,00</td>
+                            <td>10/11/2023</td>
+                            <td class="icons-table">
+                                <span><img src="assets/img/delete-logo.svg" alt=""></span>
+                                <span><img src="assets/img/edit-logo.svg" alt=""></span>
+                                <span><img src="assets/img/dados-logo.svg" alt=""></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span>32</span></td>
+                            <td><span>200 Salgados</span></td>
+                            <td>R$ 120,90</td>
+                            <td>09/11/2023</td>
+                            <td class="icons-table">
+                                <span><img src="assets/img/delete-logo.svg" alt=""></span>
+                                <span><img src="assets/img/edit-logo.svg" alt=""></span>
+                                <span><img src="assets/img/dados-logo.svg" alt=""></span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div><!-- fim wrapper tabela -->
+        </div>
+
+        <div class="menu-modal" id="menu-modal">
+            <form action="">
+                <a onclick="modalClose()">
+                    <span class="icon-close"><i class="bi bi-x"></i></span>
+                </a>
+
+                <h2>Cadastro de Vendas</h2>
+                <hr>
+
+                <div class="wrapper-inputs">
+                    <div class="inputs-modal">
+                        <label for="input-data">Data:</label>
+                        <input type="date" name="input-data" id="input-data" required>
+                    </div>
+                    <div class="inputs-modal">
+                        <label for="input-hr">Horário:</label>
+                        <input type="time" name="input-hr" id="input-hr" required>
+                    </div>
+                    <div class="inputs-modal">
+                        <label for="input-number">Telefone:</label>
+                        <input type="tel" name="input-number" placeholder="(00) 0000-0000" id="input-number"
+                            maxlength="16" required>
+                        <script type="text/javascript">
+                            $("#input-number").mask("(00) 0 0000-0000");
+                        </script>
+                    </div>
+                    <div class="inputs-modal">
+                        <label for="input-nome">Nome:</label>
+                        <input type="text" name="input-nome" placeholder="Nome" id="input-nome" required>
+                    </div>
+                    <div class="inputs-modal">
+                        <label for="input-endereco">Endereço:</label>
+                        <input type="text" name="input-endereco" placeholder="Endereço" id="input-endereco" required>
+                    </div>
+                    <div class="inputs-modal">
+                        <label for="input-tipo">Tipo (Standard ou Premium):</label>
+                        <input type="text" name="input-tipo" placeholder="Tipo" id="input-tipo" required>
+                    </div>
+                    <div class="inputs-modal">
+                        <label for="input-quantidade">Quantidade:</label>
+                        <input type="number" name="input-quantidade" placeholder="0" id="input-quantidade" required>
+                    </div>
+                    <div class="inputs-modal">
+                        <label for="input-cafe">Café (Litros):</label>
+                        <input type="number" name="input-cafe" placeholder="0" id="input-cafe" required>
+                    </div>
+                    <div class="inputs-modal">
+                        <label for="input-bebida">Bebida (Litros):</label>
+                        <input type="number" name="input-bebida" placeholder="0" id="input-bebida" required>
+                    </div>
+                    <div class="inputs-modal">
+                        <label for="input-salg-frito">Salgados Fritos:</label>
+                        <input type="text" name="input-salg-frito" placeholder="Coxinha 10" id="input-salg-frito"
+                            required>
+                    </div>
+                    <div class="inputs-modal">
+                        <label for="input-salg-assado">Salgados Assados:</label>
+                        <input type="text" name="input-salg-assado" placeholder="Empada 5" id="input-salg-assado"
+                            required>
+                    </div>
+                    <div class="inputs-modal">
+                        <label for="input-doces">Doces:</label>
+                        <input type="text" name="input-doces" placeholder="Bolo de chocolate 10" id="input-doces"
+                            required>
+                    </div>
+                </div> <!-- fim wrapper inputs -->
+
+                <span>Itens:</span>
+
+                <div class="checkbox-wrapper">
+                    <ul>
+                        <li>
+                            <input type="checkbox" name="check-cestas" id="check-cestas"
+                                onclick="cestasChecked(this.checked)">
+                            <label for="check-cestas">Cestas</label>
+                            <input type="number" placeholder="0" name="qntd-cestas" id="qntd-cestas">
+                        </li>
+                        <li>
+                            <input type="checkbox" name="check-garrafas" id="check-garrafas"
+                                onclick="garrafasChecked(this.checked)">
+                            <label for="check-garrafas">Garrafas</label>
+                            <input type="number" placeholder="0" name="qntd-garrafas" id="qntd-garrafas">
+                        </li>
+                        <li>
+                            <input type="checkbox" name="check-toalhas" id="check-toalhas"
+                                onclick="toalhasChecked(this.checked)">
+                            <label for="check-toalhas">Toalhas</label>
+                            <input type="number" placeholder="0" name="qntd-toalhas" id="qntd-toalhas">
+                        </li>
+                        <li>
+                            <input type="checkbox" name="check-recolhido" id="check-recolhido"
+                                onclick="recolhidoChecked(this.checked)">
+                            <label for="check-recolhido">Recolhido?</label>
+                            <input type="text" placeholder="Nome" name="nome-recolhido" id="nome-recolhido">
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="botao-modal">
+                    <button type="reset" id="button-cancelar" onclick="cancelarModal()">Cancelar</button>
+                    <button type="submit" id="button-cadastrar">Cadastrar</button>
+                </div>
+            </form>
+        </div> <!-- fim menu-modal -->
+    </main>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

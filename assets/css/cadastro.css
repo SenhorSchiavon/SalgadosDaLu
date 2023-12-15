@@ -1,5 +1,4 @@
 .area-principal {
-    min-width: 1000px;
     padding: 0 70px;
     display: none;
     flex-direction: column;
@@ -111,3 +110,4 @@ button {
 button:hover {
     transform: scale(1.05);
 }
+

@@ -75,36 +75,14 @@
                 <table id="tabela-produtos">
                     <thead>
                         <tr>
-                            <th>ID</th>
                             <th>Cliente</th>
                             <th>Telefone</th>
                             <th>Endereço</th>
                             <th>Ações</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td><span>21</span></td>
-                            <td><span>JOÃOZINHO DA SILVA</span></td>
-                            <td>(43) 9 9999-9999</td>
-                            <td>RUA TESTE TESTANDO, N230</td>
-                            <td class="icons-table">
-                                <span><img src="assets/img/delete-logo.svg" alt=""></span>
-                                <span><img src="assets/img/edit-logo.svg" alt=""></span>
-                                <span><img src="assets/img/dados-logo.svg" alt=""></span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><span>221</span></td>
-                            <td><span>MARIAZINHA DA SILVA</span></td>
-                            <td>(43) 9 9999-9999</td>
-                            <td>RUA TESTE TESTANDO, N422</td>
-                            <td class="icons-table">
-                                <span><img src="assets/img/delete-logo.svg" alt=""></span>
-                                <span><img src="assets/img/edit-logo.svg" alt=""></span>
-                                <span><img src="assets/img/dados-logo.svg" alt=""></span>
-                            </td>
-                        </tr>
+                    <tbody id="lista-usuarios">
+                      
                     </tbody>
                 </table>
             </div>
@@ -146,50 +124,40 @@
                     <table id="tabela-produtos">
                         <thead>
                             <tr>
-                                <th>ID</th>
                                 <th>Cliente</th>
                                 <th>Telefone</th>
                                 <th>Endereço</th>
                                 <th>Ações</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td><span>21</span></td>
-                                <td><span>JOÃOZINHO DA SILVA</span></td>
-                                <td>(43) 9 9999-9999</td>
-                                <td>RUA TESTE TESTANDO, N230</td>
-                                <td class="icons-table">
-                                    <span><img src="assets/img/delete-logo.svg" alt=""></span>
-                                    <span><img src="assets/img/edit-logo.svg" alt=""></span>
-                                    <span><img src="assets/img/dados-logo.svg" alt=""></span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><span>221</span></td>
-                                <td><span>MARIAZINHA DA SILVA</span></td>
-                                <td>(43) 9 9999-9999</td>
-                                <td>RUA TESTE TESTANDO, N422</td>
-                                <td class="icons-table">
-                                    <span><img src="assets/img/delete-logo.svg" alt=""></span>
-                                    <span><img src="assets/img/edit-logo.svg" alt=""></span>
-                                    <span><img src="assets/img/dados-logo.svg" alt=""></span>
-                                </td>
-                            </tr>
+                        <tbody id="lista-usuarios">
+                           
                         </tbody>
                     </table>
                 </div>
-
-
                 <div class="botao-modal">
                     <button type="reset" id="button-cancelar" onclick="cancelarModal()">Cancelar</button>
-                    <button type="submit" id="button-cadastrar">Cadastrar</button>
+                    <button type="submit" onclick="modalClose()"  id="button-cadastrar">Cadastrar</button>
                 </div>
             </form>
         </div> <!-- fim menu-modal -->
     </main>
-
     <script src="assets/js/main.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore-compat.js"></script>
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyAY4TCL91zSaHwpiW4yZS-HDAUmsanSNqM",
+            authDomain: "lusalgados-fefd4.firebaseapp.com",
+            projectId: "lusalgados-fefd4",
+            storageBucket: "lusalgados-fefd4.appspot.com",
+            messagingSenderId: "923620108946",
+            appId: "1:923620108946:web:9b97e2ff76823c4fefd44b",
+            measurementId: "G-7CLGZZ9YVC"
+          };
+          firebase.initializeApp(firebaseConfig)
+    </script>
+    <script src="./assets/js/firebase.js"></script>
 </body>
 
 </html>

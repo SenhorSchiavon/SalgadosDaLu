@@ -54,4 +54,5 @@ function cancelarModal() {
     var cancelar = document.getElementById('menu-modal');
     cancelar.classList.remove('active');
     document.body.style.overflow = "visible";
+    console.log("salve")
 }

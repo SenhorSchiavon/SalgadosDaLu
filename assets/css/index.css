@@ -1,0 +1,79 @@
+@import url(section.css);
+
+
+
+body{
+    margin:0;
+}
+
+
+aside{
+
+    max-width: 300px;
+    width: 30%;
+    height: 100%;
+    padding:20px;
+    background-color: #070707cb;
+    position: fixed;
+    display: block;
+    
+}
+
+
+
+aside header .logo{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 125px;
+    border-bottom: 1px solid #666666;
+    
+}
+#logo{
+    width: 180px;
+}
+
+
+
+.button{
+    height: 70px;
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-image{
+    margin: 10px;
+    width: 40px;
+    
+}
+
+#exit{
+    margin-top: 400px;
+    
+    
+}
+img{
+    width: 40px;
+}
+#img{
+    width: 60px;
+    
+}
+
+.btn-text{
+    color: #FFF;
+    font-family: Inter;
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px;
+}
+
+
+
+
+

@@ -75,36 +75,14 @@
                 <table id="tabela-produtos">
                     <thead>
                         <tr>
-                            <th>ID</th>
-                            <th>Produto Vendido</th>
-                            <th>Valor</th>
+                            <th>Nome</th>
+                            <th>Endereço</th>
                             <th>Data</th>
                             <th>Ações</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td><span>33</span></td>
-                            <td><span>100 Salgados</span></td>
-                            <td>R$ 60,00</td>
-                            <td>10/11/2023</td>
-                            <td class="icons-table">
-                                <span><img src="assets/img/delete-logo.svg" alt=""></span>
-                                <span><img src="assets/img/edit-logo.svg" alt=""></span>
-                                <span><img src="assets/img/dados-logo.svg" alt=""></span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><span>32</span></td>
-                            <td><span>200 Salgados</span></td>
-                            <td>R$ 120,90</td>
-                            <td>09/11/2023</td>
-                            <td class="icons-table">
-                                <span><img src="assets/img/delete-logo.svg" alt=""></span>
-                                <span><img src="assets/img/edit-logo.svg" alt=""></span>
-                                <span><img src="assets/img/dados-logo.svg" alt=""></span>
-                            </td>
-                        </tr>
+                      
                     </tbody>
                 </table>
             </div><!-- fim wrapper tabela -->
@@ -132,9 +110,7 @@
                         <label for="input-number">Telefone:</label>
                         <input type="tel" name="input-number" placeholder="(00) 0000-0000" id="input-number"
                             maxlength="16" required>
-                        <script type="text/javascript">
-                            $("#input-number").mask("(00) 0 0000-0000");
-                        </script>
+                       
                     </div>
                     <div class="inputs-modal">
                         <label for="input-nome">Nome:</label>
@@ -215,7 +191,23 @@
             </form>
         </div> <!-- fim menu-modal -->
     </main>
+    <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore-compat.js"></script>
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyA4uFJwHgV3gynZPHGVXAScwBuBJhezygQ",
+            authDomain: "salgados-da-lu.firebaseapp.com",
+            projectId: "salgados-da-lu",
+            storageBucket: "salgados-da-lu.appspot.com",
+            messagingSenderId: "530724315978",
+            appId: "1:530724315978:web:2041f02cbb6b7fb8a117b3",
+            measurementId: "G-BFLRWGSCCS"
+        };
 
+        firebase.initializeApp(firebaseConfig)
+
+    </script>
+    <script src="./assets/js/home.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
 

@@ -6,7 +6,7 @@ botaoCadastro.addEventListener('click', adicionarUsuario);
 // Função para buscar todos os cadastros do Firebase e atualizar a tabela
 function buscarCadastrosNoFirebase() {
     // Consultar os dados do Firebase
-    firebase.firestore().collection('cadastro').get().then(snapshot => {
+    firebase.firestore().collection('clientes').get().then(snapshot => {
         const tbody = document.getElementById('lista-usuarios');
         tbody.innerHTML = ''; // Limpar os dados existentes na tabela
 
@@ -50,7 +50,7 @@ function adicionarUsuario(e) {
     const endereco = document.getElementById('input-endereco').value;
 
     // Adiciona o usuário ao Firestore
-    firebase.firestore().collection('cadastro').add({
+    firebase.firestore().collection('clientes').add({
         nomeCompleto: nomeCompleto,
         endereco: endereco,
         celular: celular,
@@ -73,7 +73,7 @@ function adicionarUsuario(e) {
 
 // Função para deletar um cadastro do Firebase e da tabela
 function deletarCadastro(id) {
-    firebase.firestore().collection('cadastro').doc(id).delete()
+    firebase.firestore().collection('clientes').doc(id).delete()
     .then(() => {
         console.log("Cadastro deletado com sucesso");
         // Atualiza a tabela com os novos dados do Firebase após a exclusão
@@ -89,7 +89,7 @@ buscarCadastrosNoFirebase();
 
 // Função para buscar os dados de um usuário específico no Firebase
 function buscarUsuario(id) {
-    return firebase.firestore().collection('cadastro').doc(id).get();
+    return firebase.firestore().collection('clientes').doc(id).get();
 }
 
 // Função para preencher os campos do modal com os dados do usuário

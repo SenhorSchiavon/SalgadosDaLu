@@ -1,124 +1,64 @@
-.area-principal {
-    padding: 0 70px;
+.menu-modal {
     display: none;
-    flex-direction: column;
-}
-
-#area-principal.show {
-    display: flex;
-}
-
-.area-principal h2 {
-    margin: 0 10px;
-}
-
-#return {
-    text-decoration: none;
-    color: #fff;
-    width: 120px;
-    height: 40px;
-    border: 0;
-    align-self: end;
-    font-weight: 400;
-    background-color: #C63131;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 10px;
-    font-size: 20px;
-    cursor: pointer;
-}
-
-#return:hover {
-    background-color: #db1a1a;
-}
-
-textarea,
-input {
-    align-self: center;
-    margin-bottom: 30px;
-    height: 40px;
-    font-size: 22px;
-    padding: 0 10px;
-    border-radius: 10px;
-    border: 2px solid #000;
-}
-
-input[type=text] {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
 }
 
-textarea {
-    resize: none;
-    height: 180px;
-    width: 100%;
-    padding: 10px;
+.modal-body {
+    background-color: #fff;
+    width: 70%;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.titulo {
+    text-align: center;
 }
 
 .same-line {
     display: flex;
-    gap: 10px;
-    width: 100%;
-}
-
-#nome-area {
-    flex: 2;
-}
-
-#preco-area {
-    flex: 1;
-}
-
-.image-area {
-    min-height: 200px;
-    min-width: 300px;
-    padding: 10px;
-    border: 2px solid;
-    margin-bottom: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-self: center;
-}
-
-#preview {
-    max-width: 400px;
-    max-height: 300px;
-}
-
-#imagem {
-    border: none;
-    border-radius: 0;
-    width: 185px;
-    margin-bottom: 30px;
-
-}
-
-input[type=file]::file-selector-button {
-    border-radius: 5px;
-    background-color: #F49E13;
-    color: #fff;
-    border: none;
-    padding: 5px;
-    cursor: pointer;
-}
-
-#button-cadastro {
-    align-self: center;
-    font-size: 26px;
-    background: linear-gradient(180deg, rgba(244, 158, 19, 0.8) 0%, rgb(255, 157, 1) 35%, rgba(244, 158, 19, 0.8) 100%);
-    height: 50px;
-    padding: 2px 0;
+    justify-content: space-between;
     margin-bottom: 20px;
-    width: 500px;
-    border: 1px solid #f49e13;
+}
+
+.input-area {
+    margin-bottom: 20px;
+}
+
+.input-area h2 {
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="number"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
     border-radius: 5px;
-    font-weight: 400;
+}
+
+.botao-modal {
+    text-align: center;
+}
+
+#return{
+    padding: 10px 20px;
+    background-color: red;
     color: #fff;
-    transition: all .3s;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
 }
 
 button:hover {
-    transform: scale(1.05);
+    background-color: #0056b3;
 }
